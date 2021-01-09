@@ -1,0 +1,437 @@
+@import './config';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+html, body{
+    background-image: url('/assets/img/photo\ \(4\).jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.753);
+    background-blend-mode: multiply;
+    
+
+}
+//preloader//
+
+.preloader{
+    z-index: 99;
+    background-color: #35353a;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease;
+    .pl{
+        .pl-content{
+            .pl-animation{
+                .pla-border{
+                    border: transparent solid 1px;
+                    border-radius: 4rem;
+                    width: 3px;
+                    height: 3px;
+                    display: flex;
+                    animation: border 6s ease infinite alternate 3s;
+                    overflow: hidden;
+                    background-color: $hex-1;
+
+                    .pla-dot1, .pla-dot2, .pla-dot3, .pla-dot4, .pla-dot5{
+                        position: absolute;
+                    }
+
+                    .pla-dot1{
+                        background-color:rgb(20, 175, 136);
+                        border-radius: 4rem;
+                        width: 500px;
+                        height: 50px;
+                        left: 55%;
+                        animation: dot 3s ease infinite alternate-reverse 1s;
+                    }
+                    .pla-dot2{
+                        background-color: rgb(255, 255, 255);
+                        border-radius: 4rem;
+                        width:450px;
+                        height: 50px;
+                        left: 50%;
+                        animation: dot 3s ease infinite alternate 2s;
+                    }
+                    
+                    .pla-dot3{
+                        background-color: rgb(175, 77, 20);
+                        border-radius: 4rem;
+                        width: 450px;
+                        height: 50px;
+                        left: 45%;
+                        animation: dot 3s ease infinite alternate-reverse 3s;
+                    }
+                    .pla-dot4{
+                        background-color: #daa520;
+                        border-radius: 4rem;
+                        width: 200px;
+                        height: 50px;
+                        left: 45%;
+                        animation: dot 3s ease infinite alternate-reverse 4s;
+                    }
+                }
+            }
+            .pl-text{
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                
+
+                p{
+                    .plt-one{
+
+                        @include text(whitesmoke,20px,bold);
+
+                    }
+                    .plt-two{
+                        @include text($primary,20px,bold);
+                    }
+                }
+            }
+        }
+    }
+}
+//ketframes//
+@keyframes border {
+    from{
+        transform: translateY(0px);
+        width: 3px;
+        height: 3.5px;
+    }
+    to{
+        transform: translateY(1px) ;
+        width: 250px;
+        height: 3.5px;
+    }
+}
+
+@keyframes dot{
+    from{
+        left: -210%;
+    }
+    to{
+
+        left: 310%;
+    }
+}
+
+//remove//
+.remove{
+    pointer-events: none;
+    opacity: 0;
+}
+//clip//
+
+.open{
+    clip-path: circle(1500px at 80%) !important;
+    -webkit-clip-path: circle(1500px at 80%) !important; 
+}
+//first page//
+
+//navigation bar//
+
+//desktop navigation bar//
+@media screen and (min-width: 768px){
+    .frst-pg{
+        .head{
+            padding: 0px 100px;
+            padding-top: 20px;                
+            z-index: 9;
+            position: fixed;
+        }
+        .mns-three{
+            padding: 0px 100px;
+        }
+        .hamburger{
+            display: none;
+        }
+
+    }
+
+    
+}
+//mobile navigation bar//
+@media screen and (max-width: 768px){
+    .frst-pg{
+        .head{
+            padding-left: 10px;
+            
+        }
+        .mns-three{
+            padding: 0px 10px;
+        }
+        
+        .links{
+            display: flex;
+            flex-direction: column;                     
+            position: fixed;
+            width: 50%;
+            top: 0;
+            right:0;
+            height: 100vh;
+            background-color: #7aaa69ec;
+            clip-path: circle(0px at 80%);
+           -webkit-clip-path: circle(0px at 80%);
+           transition: all 1s ease-out;
+
+
+            li{
+                margin: 50px 0px;
+                width: 100%;
+                padding: 10px 0px;                
+                border-left: 2px white solid;
+                background-color:rgba(0, 0, 0, 0.219);
+
+            }
+        
+            
+        }
+        .hamburger{
+            background-color: $primary;
+            position: fixed;            
+            right:0;
+            top: 0;            
+            width: 70px;
+            height: 45px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            cursor: pointer;
+
+            .line-1{
+                height: 3px;
+                width: 25px;
+                background-color: white;
+                margin: 0px 5px;
+                border-radius: 4rem;
+                -webkit-border-radius: 4rem;
+                -moz-border-radius: 4rem;
+                -ms-border-radius: 4rem;
+                -o-border-radius: 4rem;
+}
+            .line-2{
+                height: 3px;
+                width: 35px;
+                background-color: white;
+                margin: 8px 5px;
+                border-radius: 4rem;            
+                -webkit-border-radius: 4rem;
+                -moz-border-radius: 4rem;
+                -ms-border-radius: 4rem;
+                -o-border-radius: 4rem;
+            }
+            .line-3{
+                height: 3px;
+                width: 25px;
+                background-color: white;
+                margin: 0px 5px;
+                border-radius: 4rem;            
+                -webkit-border-radius: 4rem;
+                -moz-border-radius: 4rem;
+                -ms-border-radius: 4rem;
+                -o-border-radius: 4rem;
+            }
+        }
+
+    }
+    
+}
+
+.frst-pg{
+    height: 100vh;
+
+
+    .head{
+
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: 0.6s;
+        .hd{
+
+
+            .nav{
+                .nav-bar{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+                    
+
+                    .brand{
+                        a{
+                            text-decoration: none;
+                            transition: 0.6s;
+                            position: relative;
+                            p{
+                                .brand-one{
+                                    @include text-1($primary);
+                                }
+                                .brand-two{
+                                    @include text-1(whitesmoke);
+                                }
+                            }
+                        }
+                    }
+
+                    .nav-list{
+                        ul{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            li{
+                                list-style: none;
+                                position: relative;
+                                a{
+                                    margin: 0 15px;
+                                    letter-spacing: 0.9px;
+                                    text-decoration: none;
+                                    @include text(whitesmoke, 13.5px, 750);
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main{
+        height: 100vh;
+        .mn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .main-sections{
+                display: flex;
+                width: 100%;
+                align-items: center;
+                flex-direction: column;
+
+                .mns-one{
+                    padding-top: 200px;
+                    width: 100%;
+                    text-align: center;
+                    .mnso-text{
+                        .dis-text{
+                            p{
+                                @include text-2(whitesmoke);
+                                letter-spacing: 1px;
+                            }
+                        }
+                        .sub-text{
+                            p{
+                                @include text-4(whitesmoke);
+
+                            }
+                        }
+                    }
+                }
+                .mns-two{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 50px 0px;
+                    .mnst-table{
+                        table{
+                            border-spacing: 20px 20px;
+                            tbody{
+                                tr{
+                                    td{
+                                        @include text(whitesmoke,15px, 400);
+                                    }
+                                    .ch-td{
+                                        border-right: $primary solid 2px;
+                                        padding-right: 10px;
+                                    }
+                                    .ah-td{
+                                        border-left: $primary solid 2px;
+                                        padding-left: 10px;
+                                    }
+                                    .left{
+                                        text-align: end;
+                                        background-color: rgba(255, 255, 255, 0.116);
+                                        border-radius: 4rem;
+                                        padding: 9px;
+
+
+                                    }
+                                    .right{
+                                        text-align: start;
+                                        background-color: rgba(255, 255, 255, 0.116);
+                                        border-radius: 4rem;
+                                        padding: 9px;
+
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .mns-three{
+                    
+                    width: 100%;
+                    .mnst-foot{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .ft-details{
+                            ul{
+                                border-left: whitesmoke solid 1px;
+                                padding-left: 10px;
+                                li{
+                                    list-style: none;
+                                    
+                                    a{
+                                        text-decoration: none;
+                                        @include text-4(whitesmoke);
+                                        margin: 5px 0px;
+                                    }
+                                }
+                            }
+                        }
+                        .ft-start{
+                            border: #f5f5f5 solid 1px;
+                            border-radius: 4rem;
+                            .fts-border{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding: 10px 20px;
+                                p{
+                                    @include text-3(whitesmoke);
+                                    
+                                }
+                                svg{
+                                    margin: 0px 10px;
+                                }
+                            }
+
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//sticky navigation//
+.sticky{
+    background-color: rgba(0, 0, 0, 0.384);
+}

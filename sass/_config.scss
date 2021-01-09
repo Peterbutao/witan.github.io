@@ -1,0 +1,39 @@
+$primary: #7AAA69;
+$hex-1: #43425d;
+$hex-2: rgb(20, 175, 136);
+
+@mixin text($cl,$fs,$fw) {
+    color: $cl;
+    font-size: $fs;
+    font-weight: $fw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@mixin text-1($cl) {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: $cl;
+    font-size: 20px;
+    font-weight: bolder;
+    
+}
+@mixin text-2($cl) {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: $cl;
+    font-size: 45px;
+    font-weight: 800;
+
+}
+@mixin text-3($cl) {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: $cl;
+    font-size: 13.5px;
+    font-weight: 500px;
+
+}
+@mixin text-4($cl) {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: $cl;
+    font-size: 11px;
+
+    
+}

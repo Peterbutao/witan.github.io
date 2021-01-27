@@ -182,6 +182,13 @@ html, body{
     .abt-main{
         padding: 100px 0px;
     }
+    .faq-main{
+        padding: 0px 100px;
+    }
+    .fmc-box{
+        width: calc(50% - 20px);
+    }
+    
 
     
 }
@@ -298,6 +305,12 @@ html, body{
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
+    }
+    .faq-main{
+        padding: 10px;
+    }
+    .fmc-box{
+        width: calc(100% - 20px);
     }
     
 }
@@ -544,9 +557,7 @@ html, body{
                                 height: 60px;
                                 border-radius: 0;
                                 top: 105%;
-                                left: 85%;
-                                
-                                
+                                left: 75%;                            
                                 
                             }
                             .flt-2{
@@ -699,4 +710,73 @@ html, body{
         
     }
 }
+
+//third page
+
+
+
+
+
+
+
+
+
+//fourth page//
+
+//faq-section//
+
+.frth-pg{
+    background-color: $hex-0;
+    .faq-section{
+        .faq-sect{
+
+            .faq-head{
+                .fh-text{
+                    text-align: center;
+                    padding: 10px 0px;
+                    .fht-title{
+                        @include text($primary, 20px, 500);
+
+                    }
+                    .fht-subtitle{
+                        @include text-4(black);
+                    }
+                }
+            }
+            .faq-main{
+                .fm-content{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+
+                    .fmc-box{
+                        
+                        background-color: rgba(255, 255, 255, 0.219);
+                        border-left: $primary solid 1.1px;
+                        margin: 10px 0px;
+                        .fmcb{
+                            padding-left: 10px;
+                            
+
+                            .fmcb-title{
+                                p{
+                                    @include text(black, 16px, 500);
+                                    margin: 10px 0px;
+                                }
+                            }
+                            .fmcb-text{
+                                p{
+                                    @include text($hex-1, 15px, 400);
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+
+}
+
 

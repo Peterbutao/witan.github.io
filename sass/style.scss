@@ -198,6 +198,7 @@ html, body{
     .frst-pg{
         .head{
             padding-left: 10px;
+            padding-top: 20px;
             
         }
         .mns-three{
@@ -236,17 +237,17 @@ html, body{
             background-color: $primary;
             position: fixed;            
             right:0;
-            top: 0;            
+            top: 5px;            
             width: 70px;
-            height: 45px;
+            height: 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             cursor: pointer;
 
             .line-1{
-                height: 3px;
-                width: 25px;
+                height: 2px;
+                width: 20px;
                 background-color: white;
                 margin: 0px 5px;
                 border-radius: 4rem;
@@ -257,9 +258,9 @@ html, body{
             }
             .line-2{
                 height: 3px;
-                width: 35px;
+                width: 30px;
                 background-color: white;
-                margin: 8px 5px;
+                margin: 5px 5px;
                 border-radius: 4rem;            
                 -webkit-border-radius: 4rem;
                 -moz-border-radius: 4rem;
@@ -267,8 +268,8 @@ html, body{
                 -o-border-radius: 4rem;
             }
             .line-3{
-                height: 3px;
-                width: 25px;
+                height: 2px;
+                width: 20px;
                 background-color: white;
                 margin: 0px 5px;
                 border-radius: 4rem;            
@@ -316,7 +317,7 @@ html, body{
 }
 
 .frst-pg{
-    background-image: url('/assets/img/photo-1.jpg');
+    background-image: url("/assets/img/bg.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -415,7 +416,8 @@ html, body{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    padding: 50px 0px;
+                    padding-bottom: 20px;
+                    padding-top: 50px;
                     .mnst-table{
                         table{
                             border-spacing: 20px 20px;
@@ -478,6 +480,10 @@ html, body{
                         .ft-start{
                             border: #f5f5f5 solid 1px;
                             border-radius: 4rem;
+                            a{
+                                text-decoration: none;
+                                
+                            }
                             .fts-border{
                                 display: flex;
                                 justify-content: space-between;
@@ -588,7 +594,7 @@ html, body{
                         }
                         .amci-text{
 
-                            background-image: url('/assets/img/photo-2.jpg');
+                            background-image: url("/assets/img/photo-2.jpg");
                             background-position: center ;
                             background-repeat: no-repeat;
                             background-size: cover;
